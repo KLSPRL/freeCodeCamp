@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Survey Form</title>
+</head>
+<body class="text-center flex flex-col min-h-screen justify-center items-center bg-slate-900">
+    <h1  id="title" >Survey Form</h1>
+    <p  id="description">Just a simple description</p>
+    <form id="survey-form" class="w-4/12 bg-slate-400" >
+        <label for="name" id="name-label">Enter your name:*<input class="w-full my-5" type="text" name="name" id="name" placeholder="My name" required></label>
+        <label for="email" id="email-label">Enter your email:*<input class="w-full my-5" type="email" name="email" id="email" placeholder="My email" required></label>
+        <label for="number" id="number-label">Enter your age: <input class="w-full my-5" type="number" name="number" id="number" min="13" max="120" placeholder="My age"></label>
+        <label for="dropdown">
+            What's your seniority level?
+            <select class="w-full my-5" name="dropdown" id="dropdown">
+                <option value="junior">Junior</option>
+                <option value="middle">Mid</option>
+                <option value="senior">Senior</option>
+            </select>
+        </label>
+        <label for="radio" class="block">
+            Do you like this survey?
+            <input class="w-full my-5 block" type="radio" name="radio" value="yes" id="yes" checked><span>Yes</span>
+            <input class="w-full my-5 block" type="radio" name="radio" value="no" id="no"><span class="block">No</span>
+        </label>
+        <label class="block">Would you recommend this survey to a friend?
+            <input class="w-full my-5" type="checkbox" name="checkbox" value="yes" id="yes">Yes
+            <input class="w-full my-5" type="checkbox" name="checkbox" value="no" id="no">No
+        </label>
+        <label for="textarea">Any comments or suggestions?</label>
+        <textarea class="w-full my-5" name="textarea" id="textarea" cols="30" rows="10" placeholder="Enter your comment here"></textarea>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+</html>
