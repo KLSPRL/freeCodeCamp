@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+#img-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #070707;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+    padding: auto 20px;
+}
+
+#tribute-info{
+    text-align: center;
+    margin: auto 20px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+a button {
+    border: none;
+    cursor: pointer;
+    background-color: #3c7bb0;
+    padding: 15px 30px;
+    color: #fff;
+    border-radius: 12px;
+    font-size: 24px;
+}
+
+button:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
