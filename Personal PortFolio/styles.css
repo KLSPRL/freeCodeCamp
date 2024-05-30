@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    color: #8e9eb5;
+}
+
+body {
+    background-color: #0f172a;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.links ul a {
+    list-style: none;
+}
+
+.links ul li {
+    list-style: none;
+    margin: 1rem 2rem;
+    color: lavender;
+}
+
+.links ul li:hover {
+    transform: scale(1.2);
+    color: #f9f9f9;
+}
+
+.links ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar h1 {
+    margin: 1rem 2rem;
+    color: lavender;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    background: rgba(16, 17, 48, 0.33);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+}
+
+#welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+img {
+    border-radius: 50%;
+    margin: 0 7rem;
+}
+
+#phrase {
+    margin: 0 7rem;
+}
+
+#phrase h3,
+p {
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin-bottom: 10rem;
+}
+
+#projects h3 {
+    margin: 5rem 0;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.project-tile {
+    font-size: 7rem;
+    animation: spin 10s linear infinite;
+    margin: 5rem;
+}
+
+.project-tile:hover {
+    transform: scale(1.5);
+    color: #f9f9f9;
+    text-shadow: 0 0 15px #f9f9f9;
+}
+
+/* creo un animazione per .project-tile per farlo girare */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#job {
+    display: inline-block;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: light-sweep 6s linear infinite;
+    font-size: 4rem !important;
+
+}
+
+@keyframes light-sweep {
+    0% {
+        background-position: -100%;
+    }
+
+    100% {
+        background-position: 200%;
+    }
+}
+
+/* media query per rendere mobile frendly */
+@media (max-width: 768px) {
+    #welcome-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        margin: 0;
+    }
+
+    #phrase {
+        margin: 0;
+    }
+
+    #projects {
+        margin: 0;
+    }
+
+    #projects h3 {
+        margin: 2rem 0;
+    }
+
+    .project-tile {
+        font-size: 4rem;
+    }
+
+    #job {
+        font-size: 2rem !important;
+    }
+}
